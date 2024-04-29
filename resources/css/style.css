@@ -1,0 +1,16 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    vertical-align: baseline;
+    box-sizing: border-box;
+    list-style: none;
+}
+
+h1, h2, h3, h4, h5 {
+    font-family: 'Poppins', 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Sans', Arial, sans-serif;
+}
+
+p, span, li, td, tr {
+    font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+}
