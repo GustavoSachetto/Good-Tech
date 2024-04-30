@@ -14,6 +14,13 @@ $obRouter->get('/', [
     }
 ]);
 
+$obRouter->get('/pesquisa', [
+    function ($request) {
+        return new Response(200, Pages\PesquisaController::get($request));
+    }
+]);
+
+
 $obRouter->post('/', [
     function ($request) {
         return new Response(200, Pages\HomeController::set($request));

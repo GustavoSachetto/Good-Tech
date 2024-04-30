@@ -14,3 +14,24 @@ h1, h2, h3, h4, h5 {
 p, span, li, td, tr {
     font-family: 'Open Sans', Arial, Helvetica, sans-serif;
 }
+
+.navbar-toggler{
+    border: none;
+}
+
+.menu-icon{
+    fill: rgb(0, 0, 0); /*Trocar a cor do botao*/
+    margin-right: -15px;
+    border-radius: 5px;
+    width: 50px;
+    height: 50px;
+}
+
+img{
+    border-radius: px;
+}
+
+.imgIncial{
+    border-radius: 20px;
+    width: 550px;
+}
