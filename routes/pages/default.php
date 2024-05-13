@@ -10,24 +10,55 @@ $obRouter->get('/', [
         'cache'
     ],
     function ($request) {
-        return new Response(200, Pages\HomeController::get($request));
+        return new Response(200, Pages\HomeController::get());
     }
 ]);
 
-$obRouter->post('/', [
+$obRouter->get('/pesquisa', [
+    'middlewares' => [
+        'cache'
+    ],
     function ($request) {
-        return new Response(200, Pages\HomeController::set($request));
+        return new Response(200, Pages\PesquisaController::get());
     }
 ]);
 
-$obRouter->put('/{id}', [
-    function ($request, $id) {
-        return new Response(200, Pages\HomeController::edit($request, $id));
+$obRouter->get('/sobre', [
+    'middlewares' => [
+        'cache'
+    ],
+    function ($request) {
+        return new Response(200, Pages\SobreController::get());
     }
 ]);
 
-$obRouter->delete('/{id}', [
-    function ($request, $id) {
-        return new Response(200, Pages\HomeController::delete($request, $id));
+$obRouter->get('/projetos', [
+    'middlewares' => [
+        'cache'
+    ],
+    function ($request) {
+        return new Response(200, Pages\ProjetoController::get());
     }
 ]);
+
+
+
+
+
+// $obRouter->post('/', [
+//     function ($request) {
+//         return new Response(200, Pages\HomeController::set($request));
+//     }
+// ]);
+
+// $obRouter->put('/{id}', [
+//     function ($request, $id) {
+//         return new Response(200, Pages\HomeController::edit($request, $id));
+//     }
+// ]);
+
+// $obRouter->delete('/{id}', [
+//     function ($request, $id) {
+//         return new Response(200, Pages\HomeController::delete($request, $id));
+//     }
+// ]);
