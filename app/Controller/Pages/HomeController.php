@@ -15,8 +15,12 @@ class HomeController extends Page
     {
         $title = 'Good tech | Bem vindo ao nosso Blog sobre Acessibilidade Digital';
         $content = View::render('pages/home');
+        $data = [
+            'title'   => $title,
+            'content' => $content
+        ];
         
-        return parent::getPage($title, $content);
+        return parent::getPage($data);
     }
     
     /**

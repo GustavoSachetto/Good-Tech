@@ -14,9 +14,13 @@ class ProjetoController extends Page
     public static function get(): string
     {
         $title = 'Good Tech | Projetos';
-        $content = View::render('pages/projetos');
+        $content = View::render('pages/projetos');   
+        $data = [
+            'title'   => $title,
+            'content' => $content
+        ];
         
-        return parent::getPage($title, $content);
+        return parent::getPage($data);
     }
     
     /**

@@ -14,9 +14,13 @@ class SobreController extends Page
     public static function get(): string
     {
         $title = 'Good Tech | Sobre nós';
-        $content = View::render('pages/sobre');
+        $content = View::render('pages/sobre');  
+        $data = [
+            'title'   => $title,
+            'content' => $content
+        ];
         
-        return parent::getPage($title, $content);
+        return parent::getPage($data);
     }
     
     /**

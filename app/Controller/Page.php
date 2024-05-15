@@ -25,13 +25,10 @@ abstract class Page
     /** 
      * Método responsável por renderizar o conteúdo da página
     */
-    public static function getPage(string $title, string $content): string 
+    public static function getPage(array $data): string 
     {
-        return View::render('layout/page', [
-            'title' => $title,
-            'content' => $content,
-            'header' => self::getHeader(),
-            'footer' => self::getFooter()
-        ]);
+        $data['header'] = self::getHeader();
+        $data['footer'] = self::getFooter();
+        return View::render('layout/page', $data);
     }
 }

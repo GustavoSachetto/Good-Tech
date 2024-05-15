@@ -15,8 +15,12 @@ class PesquisaController extends Page
     {
         $title = 'Good Tech | Pesquisas';
         $content = View::render('pages/pesquisa');
+        $data = [
+            'title'   => $title,
+            'content' => $content,
+        ];
         
-        return parent::getPage($title, $content);
+        return parent::getPage($data);
     }
     
     /**
