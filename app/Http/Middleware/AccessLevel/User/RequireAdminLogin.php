@@ -5,16 +5,18 @@ namespace App\Http\Middleware\AccessLevel\User;
 use Closure;
 use App\Http\Request;
 use App\Http\Response;
-use App\Http\Middleware\AccessLevel\UserStatus;
+use App\Session\login\User as SessionLoginUser;
 
-class RequireAdminLogin extends UserStatus
+class RequireAdminLogin
 {
     /** 
      * Método responsável por verificar se o usuáro está logado como admin, se estiver, ele será redirecionado
     */
     private function userIsLogged(Request $request): void
     {
-        $this->isLoggedWithAdmin($request, 'admin', 'login');
+        if (!SessionLoginUser::isLoggedWithAdmin()) {
+            $request->getRouter()->redirect('/login');
+        }     
     }
 
     /**

@@ -10,16 +10,7 @@ $obRouter->get('/', [
         'cache'
     ],
     function ($request) {
-        return new Response(200, Pages\HomeController::get());
-    }
-]);
-
-$obRouter->get('/pesquisa', [
-    'middlewares' => [
-        'cache'
-    ],
-    function ($request) {
-        return new Response(200, Pages\PesquisaController::get());
+        return new Response(200, Pages\HomeController::get($request));
     }
 ]);
 
@@ -28,37 +19,6 @@ $obRouter->get('/sobre', [
         'cache'
     ],
     function ($request) {
-        return new Response(200, Pages\SobreController::get());
+        return new Response(200, Pages\AboutController::get($request));
     }
 ]);
-
-$obRouter->get('/projetos', [
-    'middlewares' => [
-        'cache'
-    ],
-    function ($request) {
-        return new Response(200, Pages\ProjetoController::get());
-    }
-]);
-
-
-
-
-
-// $obRouter->post('/', [
-//     function ($request) {
-//         return new Response(200, Pages\HomeController::set($request));
-//     }
-// ]);
-
-// $obRouter->put('/{id}', [
-//     function ($request, $id) {
-//         return new Response(200, Pages\HomeController::edit($request, $id));
-//     }
-// ]);
-
-// $obRouter->delete('/{id}', [
-//     function ($request, $id) {
-//         return new Response(200, Pages\HomeController::delete($request, $id));
-//     }
-// ]);

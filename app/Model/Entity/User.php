@@ -13,6 +13,7 @@ class User
     public string $email;
     public string $password_hash;
     public bool $admin_access = false;
+    public string|null $image = null;
 
     public bool $deleted = false;
 

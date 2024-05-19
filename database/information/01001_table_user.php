@@ -10,18 +10,18 @@ return new class extends Interaction
      */
     private array $informations = [
         [
-            'name' => 'Usuário admin',
-            'email' => 'admin@email.com',
-            'admin_access' => 1, //true
-            'image' => 'user-default.webp',
-            'password_hash' => '$2y$10$mUsr/jxR6XXs8lgXeaukPu/zkkOTIsX2dUus43h9sDBCuDu/upY/e'
+            'name'          => 'Gustavo Gualda',
+            'email'         => 'gualda@email.com',
+            'admin_access'  => false,
+            'image'         => 'user-default.webp',
+            'password_hash' => '$2y$10$mUsr/jxR6XXs8lgXeaukPu/zkkOTIsX2dUus43h9sDBCuDu/upY/e' // admin
         ],
         [
-            'name' => 'Usuário padrão',
-            'email' => 'default@email.com',
-            'admin_access' => 0, // false
-            'image' => 'user-default.webp',
-            'password_hash' => '$2y$10$R4iNbyE5R7WY7rB592SpRe8fpdoCpqNbU1sAR16o9gaA6GmFfdUri'
+            'name'          => 'Gustavo Sachetto',
+            'email'         => 'sachetto@email.com',
+            'admin_access'  => true,
+            'image'         => 'user-default.webp',
+            'password_hash' => '$2y$10$R4iNbyE5R7WY7rB592SpRe8fpdoCpqNbU1sAR16o9gaA6GmFfdUri' // default
         ]
     ];
 

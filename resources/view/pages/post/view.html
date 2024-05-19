@@ -1,0 +1,33 @@
+<main>
+    <article class="px-5" style="margin-bottom: 155px;">
+        <section class="mx-3 my-4">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                  <li class="breadcrumb-item"><a href="{{URL}}/">Home</a></li>
+                  <li class="breadcrumb-item"><a href="{{URL}}/pesquisas">Pesquisas</a></li>
+                  <li class="breadcrumb-item active" aria-current="page">{{title}}</li>
+                </ol>
+              </nav>
+        </section>
+        <section>
+            <div class="card border-0" style="width: 65%;">
+                <div class="card-body">
+                  <h1 class="card-title">{{title}}</h1>
+                  <p class="card-text">Por <strong class="fw-semibold">{{user_name}}</strong>, {{created_at}}</p>
+                  <img src="{{URL}}/resources/img/post/{{image}}" class="card-img mb-3 rouded-1 object-fit-cover" alt="{{title}}">
+                  <ul class="list-group mt-2 mb-5">
+                    <li class="list-group-item"><strong>Categoria:</strong> {{category}}</li>
+                  </ul>
+                  <div class="card-text">
+                    <h4 class="my-3">{{subtitle}}</h4>
+                    <p>{{content}}</p>
+                  </div>
+                  <div class="my-2">
+                    <a href="{{URL}}/pesquisa" class="btn btn-secondary">Conferir outras pesquisas</a>
+                    <a href="#" class="btn btn-secondary">Ver projetos</a>
+                  </div>
+                </div>
+              </div>
+        </section>
+    </article>
+</main>

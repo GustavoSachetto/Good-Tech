@@ -14,6 +14,7 @@ return new class extends Interaction
         (new Database)->create('post', function(Blueprint $table) {
             $table->id();
             $table->varchar('title', 70)->unique()->notNull();
+            $table->varchar('subtitle', 200)->notNull();
             $table->text('content')->notNull();
             $table->varchar('image');
             $table->timestamp('created_at');

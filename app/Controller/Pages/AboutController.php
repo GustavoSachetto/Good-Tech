@@ -5,15 +5,15 @@ namespace App\Controller\Pages;
 use App\Utils\View;
 use App\Controller\Page;
 
-class HomeController extends Page
+class AboutController extends Page
 {
     /**
      * Método responsável por pegar o conteúdo da página home
      */
     public static function get(): string
     {
-        $title = 'Good tech | Bem vindo ao nosso Blog sobre Acessibilidade Digital';
-        $content = View::render('pages/home');
+        $title = 'Good tech | Sobre';
+        $content = View::render('pages/about');
         
         return parent::getPage($title, $content);
     }
