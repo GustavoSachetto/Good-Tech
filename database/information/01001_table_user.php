@@ -22,6 +22,20 @@ return new class extends Interaction
             'admin_access'  => true,
             'image'         => 'user-default.webp',
             'password_hash' => '$2y$10$R4iNbyE5R7WY7rB592SpRe8fpdoCpqNbU1sAR16o9gaA6GmFfdUri' // default
+        ],
+        [
+            'name'          => 'Patrick Felix',
+            'email'         => 'patrick@email.com',
+            'admin_access'  => true,
+            'image'         => 'user-default.webp',
+            'password_hash' => '$2y$10$R4iNbyE5R7WY7rB592SpRe8fpdoCpqNbU1sAR16o9gaA6GmFfdUri' // default
+        ],
+        [
+            'name'          => 'João Vitor',
+            'email'         => 'João@email.com',
+            'admin_access'  => true,
+            'image'         => 'user-default.webp',
+            'password_hash' => '$2y$10$R4iNbyE5R7WY7rB592SpRe8fpdoCpqNbU1sAR16o9gaA6GmFfdUri' // default
         ]
     ];
 
