@@ -12,7 +12,7 @@ return new class extends Interaction
         [
             'name'          => 'Gustavo Gualda',
             'email'         => 'gualda@email.com',
-            'admin_access'  => false,
+            'admin_access'  => true,
             'image'         => 'user-default.webp',
             'password_hash' => '$2y$10$mUsr/jxR6XXs8lgXeaukPu/zkkOTIsX2dUus43h9sDBCuDu/upY/e' // admin
         ],

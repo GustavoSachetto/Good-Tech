@@ -9,12 +9,12 @@ return new class extends Interaction
      * Informações a serem inseridas na tabela
      */
     private array $informations = [
-        ['name' => 'visual'],
-        ['name' => 'auditiva'],
-        ['name' => 'motora'],
-        ['name' => 'cognitiva'],
-        ['name' => 'adaptativa'],
-        ['name' => 'sensitiva']
+        ['name' => 'Visual'],
+        ['name' => 'Auditiva'],
+        ['name' => 'Motora'],
+        ['name' => 'Cognitiva'],
+        ['name' => 'Adaptativa'],
+        ['name' => 'Sensitiva']
     ];
 
     /** 
