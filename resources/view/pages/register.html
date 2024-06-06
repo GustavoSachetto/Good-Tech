@@ -1,6 +1,7 @@
 <main class="d-flex mt-2 p-5 flex-wrap justify-content-center">
+
     <form  method="post" action="" class="card px-3 py-4 rounded-4 border-1" style="width: 600px;">
-        <h2 class="card-title mb-3">Entrar</h2>
+        <h2 class="card-title mb-3">Criar conta.</h2>
         {{alert}}
         <div class="mb-3">
           <label htmlFor="email" class="form-label">Endereço de email</label>
@@ -23,10 +24,7 @@
               placeholder="********"
             />
           </div>
-        </div>
-        <p>Sem conta? 
-          <a href="{{URL}}/register"> Cadastre-se aqui!</a>
-        </p> 
+        </div> 
         <button type="submit" class="btn btn-primary">Enviar</button>
     </form>
 </main>
