@@ -79,23 +79,16 @@ class Examiner
     */
     public static function checkRequiredFields(array $fields)
     {
-        $errorMessage = null; // Inicializa a variável de mensagem de erro como nula
-    
         // converte (array): [campo, campo2, campo3] 
         // para (string): campo, campo2 e campo3
         $filter = preg_replace("/(,+\s+\w+)$/", ' e ', implode(", ", array_keys($fields))).array_key_last($fields);
     
         foreach ($fields as $key => $value) {
             if (!isset($value)) {
-                $errorMessage = count($fields) > 1 ? "Os campos {$filter} são obrigatórios." : "O campo {$key} é obrigatório";
+                return count($fields) > 1 ? "Os campos {$filter} são obrigatórios." : "O campo {$key} é obrigatório";
             } else if (empty($value)) {
-                $errorMessage = count($fields) > 1 ? "Os campos {$filter} não podem estar vazios." : "O campo {$key} não pode estar vazio.";
+                return count($fields) > 1 ? "Os campos {$filter} não podem estar vazios." : "O campo {$key} não pode estar vazio.";
             }
-        }
-    
-        // Se uma mensagem de erro foi definida, lançar uma exceção com essa mensagem
-        if ($errorMessage !== null) {
-           return $errorMessage;
         }
     }
     
