@@ -87,16 +87,12 @@ class Examiner
     
         foreach ($fields as $key => $value) {
             if (!isset($value)) {
-                $errorMessage = count($fields) > 1 ? "Os campos {$filter} são obrigatórios." : "O campo {$key} é obrigatório";
+               return count($fields) > 1 ? "Os campos {$filter} são obrigatórios." : "O campo {$key} é obrigatório";
             } else if (empty($value)) {
-                $errorMessage = count($fields) > 1 ? "Os campos {$filter} não podem estar vazios." : "O campo {$key} não pode estar vazio.";
+                return count($fields) > 1 ? "Os campos {$filter} não podem estar vazios." : "O campo {$key} não pode estar vazio.";
             }
         }
     
-        // Se uma mensagem de erro foi definida, lançar uma exceção com essa mensagem
-        if ($errorMessage !== null) {
-           return $errorMessage;
-        }
     }
     
 }

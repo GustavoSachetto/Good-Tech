@@ -8,19 +8,18 @@ use App\Utils\Examiner;
 use App\Controller\Page;
 use App\Controller\Component\AlertController;
 use App\Model\Entity\User as EntityUser;
-use App\Session\login\User as SessionLoginUser;
 
 class RegisterController extends Page
 {
     /**
      * Método responsável por carregar a página Register
      */
-    public static function get(Request $request, string $errorMessage = null): string
+    public static function get(Request $request, array $message = null): string
     {
-        $alert = !is_null($errorMessage) ? AlertController::get('danger', $errorMessage) : '';
+        $alert = !is_null($message) ? AlertController::get($message['type'], $message['message']) : '';
 
         $title = 'Good tech | Criar conta';
-        $content = View::render('pages/register',[
+        $content = View::render('pages/register', [
             'alert' => $alert
         ]);
 
@@ -30,23 +29,44 @@ class RegisterController extends Page
     /**
      * Método responsável pegar os valores e criar conta
      */
-    public static function setRegister(Request $request){
-
+    public static function setRegister(Request $request)
+    {
         $vars = $request->getPostVars();
 
         $verifyInput = Examiner::checkRequiredFields([
             'email'    => $vars['email'] ?? null,
-            'password' => $vars['password'] ?? null
+            'password' => $vars['password'] ?? null,
+            'name'     => $vars['name'] ?? null
         ]);
-
-        if($verifyInput){
-            return self::get($request, $verifyInput);
+        if ($verifyInput) {
+            return self::get($request, [
+                'message' => $verifyInput,
+                'type'    => 'danger'
+            ]);
         }
+
         
-        $obUser = EntityUser::getUserByEmail($vars['email']);
-
-        if($obUser){
-            return self::get($request, 'Email já em uso');
+        $verifyEmail = EntityUser::getUserByEmail($vars['email']);
+        if ($verifyEmail) {
+            return self::get($request, [
+                'message' => 'Email já em uso',
+                'type'    => 'danger'
+            ]  
+        );
         }
+
+        $obUser = new EntityUser;
+
+        $obUser->name            = $vars['name'];
+        $obUser->email           = $vars['email'];
+        $obUser->password_hash   = password_hash($vars['password'], PASSWORD_DEFAULT);
+        $obUser->admin_access    = 0;       //false
+        $obUser->deleted         = 0;       //false
+
+        $obUser->create();
+        return self::get($request, [
+            'message' => 'Conta criada com sucesso',
+            'type'    => 'success'
+        ]);  
     }
 }
