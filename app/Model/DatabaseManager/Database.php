@@ -163,15 +163,14 @@ class Database
         string $order = null, 
         string $limit = null, 
         string $fields = '*'
-        ): PDOStatement
-    {
-        $where = strlen($where) ? 'WHERE '.$where : '';
-        $order = strlen($order) ? 'ORDER BY '.$order : '';
-        $limit = strlen($limit) ? 'LIMIT '.$limit : '';
+    ): PDOStatement {
+        $where = $where !== null && $where !== '' ? 'WHERE '.$where : '';
+        $order = $order !== null && $order !== '' ? 'ORDER BY '.$order : '';
+        $limit = $limit !== null && $limit !== '' ? 'LIMIT '.$limit : '';
         $join  = isset($this->join) ? $join = $this->join : $join = '';
-
+    
         $query = 'SELECT '.$fields.' FROM '.$this->table.' '.$join.' '.$where.' '.$order.' '.$limit;
-
+    
         return $this->execute($query);
     }
 

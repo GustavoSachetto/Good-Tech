@@ -77,20 +77,22 @@ class Examiner
     /** 
      * Método responsável por verificar se os campos obrigatórios foram preenchidos
     */
-    public static function checkRequiredFields(array $fields): void
+    public static function checkRequiredFields(array $fields)
     {
+        $errorMessage = null; // Inicializa a variável de mensagem de erro como nula
+    
         // converte (array): [campo, campo2, campo3] 
         // para (string): campo, campo2 e campo3
-        $filter =  preg_replace("/(,+\s+\w+)$/", ' e ', implode(", ", array_keys($fields))).array_key_last($fields);
-
+        $filter = preg_replace("/(,+\s+\w+)$/", ' e ', implode(", ", array_keys($fields))).array_key_last($fields);
+    
         foreach ($fields as $key => $value) {
             if (!isset($value)) {
-                $message = count($fields) > 1 ? "Os campos {$filter} são obrigatórios." : "O campo {$key} é obrigatório";
-                throw new Exception($message, 400);
+               return count($fields) > 1 ? "Os campos {$filter} são obrigatórios." : "O campo {$key} é obrigatório";
             } else if (empty($value)) {
-                $message = count($fields) > 1 ? "Os campos {$filter} não podem estar vazios." : "O campo {$key} não pode estar vazio.";
-                throw new Exception($message, 400);
+                return count($fields) > 1 ? "Os campos {$filter} não podem estar vazios." : "O campo {$key} não pode estar vazio.";
             }
         }
+    
     }
+    
 }
