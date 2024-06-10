@@ -1,10 +1,19 @@
-<main class="d-flex mt-2 p-5 flex-wrap justify-content-center">
-
+<main class="d-flex my-5 p-5 flex-wrap justify-content-center ">
     <form  method="post" action="" class="card px-3 py-4 rounded-4 border-1" style="width: 600px;">
         <h2 class="card-title mb-3">Criar conta.</h2>
         {{alert}}
         <div class="mb-3">
-          <label htmlFor="email" class="form-label">Endereço de email</label>
+          <label htmlFor="name" class="form-label">Nome <span class="text-danger">Obrigatório</span></label>
+          <input 
+            id="name" 
+            type="name" 
+            name="name" 
+            class="form-control"
+            placeholder="João Batista" 
+          />
+        </div>
+        <div class="mb-3">
+          <label htmlFor="email" class="form-label">Endereço de email <span class="text-danger">Obrigatório</span></label>
           <input 
             id="email" 
             type="email" 
@@ -14,7 +23,7 @@
           />
         </div>
         <div class="mb-3">
-          <label htmlFor="password" class="form-label">Senha</label>
+          <label htmlFor="password" class="form-label">Senha <span class="text-danger">Obrigatório</span></label>
           <div class="input-group">
             <input 
               id="password" 

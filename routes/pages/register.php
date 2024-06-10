@@ -15,9 +15,6 @@ $obRouter->get('/register', [
 ]);
 
 $obRouter->post('/register', [
-    'middlewares' => [
-        'cache'
-    ],
     function ($request) {
         return new Response(200, Pages\RegisterController::setRegister($request));
     }
