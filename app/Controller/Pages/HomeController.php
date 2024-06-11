@@ -16,7 +16,7 @@ class HomeController extends Page
         $results = EntityPost::getPosts('post.deleted = false', 'post.id DESC');
         $itens = '';
 
-        for ($i=0; $i < 2; $i++) { 
+        for ($i=0; $i < 3; $i++) { 
             $obPost = $results->fetchObject(EntityPost::class);
             $itens .= View::render('pages/home/components/post', [
                 'id'         => $obPost->id,
