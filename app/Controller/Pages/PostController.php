@@ -97,7 +97,7 @@ class PostController extends Page
 
         $obPost = EntityPost::getPostByTitle($vars['title']);
         Examiner::checkObjectNotExists($obPost, EntityPost::class);
-        $image = ImageManager::saveImage($files['image'] ?? null, $user['id']);
+        $image = ImageManager::saveImagePost($files['image'] ?? null, $user['id']);
 
         $obPost = new EntityPost;
 

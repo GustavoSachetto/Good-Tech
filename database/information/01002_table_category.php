@@ -14,6 +14,9 @@ return new class extends Interaction
         ['name' => 'Motora'],
         ['name' => 'Cognitiva'],
         ['name' => 'Adaptativa'],
+        ['name' => 'Escopo'],
+        ['name' => 'Matriz'],
+        ['name' => 'Diagrama'],
         ['name' => 'Sensitiva']
     ];
 
