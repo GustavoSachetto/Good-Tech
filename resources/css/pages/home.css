@@ -1,0 +1,34 @@
+main > article.container-introduction {
+  display: flex;
+  flex-direction: row;
+}
+
+main > article.container-introduction > section.about {
+  width: 50vw;
+  height: 28vh;
+  min-height: 270px;
+  display: flex;
+  align-items: start;
+  margin-top: 8vw;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+main > article.container-introduction > section.about > h1 {
+  color: var(--orange);
+}
+
+main > article.container-introduction > section.about > p {
+  width: 85%;
+  line-height: 24px;
+}
+
+main > article.container-introduction > aside.illustration {
+  width: 50vw;
+  display: flex;
+  justify-content: center;
+}
+
+main > article.container-introduction > aside.illustration > img {
+  width: 100%;
+}

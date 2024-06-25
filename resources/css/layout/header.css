@@ -1,0 +1,42 @@
+header.container-nav, header.container-nav > a.logo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+header.container-nav {
+  margin: 16px 32px;
+}
+
+header.container-nav > a.logo > img {
+  width: 69px;
+  margin-right: 16px;
+}
+
+header.container-nav > a.logo > span.title {
+  color: var(--dark-blue);
+  text-transform: uppercase;
+  font: normal 28px var(--title-font);
+}
+
+header.container-nav > nav.navbar {
+  width: 36%;
+  max-width: 550px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+
+header.container-nav > nav.navbar > .btn-login {
+  padding: 7px 9%;
+  border-radius: 32px;
+  color: var(--white);
+  background-color: var(--dark-blue);
+  font: normal 17px var(--heading-font);
+  transition: 300ms ease-in-out;
+}
+
+header.container-nav > nav.navbar > .btn-login:hover {
+  background-color: var(--light-blue);
+}

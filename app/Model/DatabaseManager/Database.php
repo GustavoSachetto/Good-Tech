@@ -131,6 +131,20 @@ class Database
         return true;
     }
 
+    /**
+     * Método responsável por importar o banco de dados
+     */
+    public function import(string $fileSql): bool
+    {
+        try {
+            self::sqlConnect()->query($fileSql);
+        } catch(PDOException $e) {
+            die('ERROR: '.$e->getMessage());
+        }
+
+        return true;
+    }
+
 
     /**
      * Método responsável por inserir dados no banco.
@@ -163,14 +177,15 @@ class Database
         string $order = null, 
         string $limit = null, 
         string $fields = '*'
-    ): PDOStatement {
-        $where = $where !== null && $where !== '' ? 'WHERE '.$where : '';
-        $order = $order !== null && $order !== '' ? 'ORDER BY '.$order : '';
-        $limit = $limit !== null && $limit !== '' ? 'LIMIT '.$limit : '';
+        ): PDOStatement
+    {
+        $where = strlen($where) ? 'WHERE '.$where : '';
+        $order = strlen($order) ? 'ORDER BY '.$order : '';
+        $limit = strlen($limit) ? 'LIMIT '.$limit : '';
         $join  = isset($this->join) ? $join = $this->join : $join = '';
-    
+
         $query = 'SELECT '.$fields.' FROM '.$this->table.' '.$join.' '.$where.' '.$order.' '.$limit;
-    
+
         return $this->execute($query);
     }
 

@@ -1,23 +1,41 @@
-* {
-    margin: 0;
-    padding: 0;
-    border: 0;
-    vertical-align: baseline;
-    box-sizing: border-box;
-    list-style: none;
-}
+/* =============== Configuração =============== */
 
-h1, h2, h3, h4, h5 {
-    color: purple;
-    font-family: 'Poppins', 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Sans', Arial, sans-serif;
-}
+@import url(config/variables.css);
 
-p, span, li, td, tr {
-    font-family: 'Open Sans', Arial, Helvetica, sans-serif;
-}
+@import url(config/reset.css);
 
-.menu-icon {
-    fill: rgb(0, 0, 0); /*Trocar a cor do botao*/
-    width: 50px;
-    height: 50px;
-}
+@import url(config/fonts.css);
+
+/* =============== Customização =============== */
+
+@import url(custom/buttons.css);
+
+/* ================== Layout ================== */
+
+@import url(layout/header.css);
+
+@import url(layout/main.css);
+
+@import url(layout/footer.css);
+
+/* ================= Páginas ================== */
+
+@import url(pages/home.css);
+
+@import url(pages/about.css);
+
+@import url(pages/account.css);
+
+@import url(pages/post/view.css);
+
+@import url(pages/post/search.css);
+
+@import url(pages/project/search.css);
+
+@import url(pages/login/form-login.css);
+
+/* ================= Componentes ================== */
+
+@import url(components/card.css);
+
+@import url(components/form/create.css);

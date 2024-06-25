@@ -1,24 +1,24 @@
 <?php
 
 use App\Http\Response;
-use App\Controller\Pages;
+use App\Controller\Pages\Default;
 
-// Modelo á ser seguido na definição de rotas das páginas da aplicação
-
+// Rota da página home
 $obRouter->get('/', [
     'middlewares' => [
         'cache'
     ],
-    function ($request) {
-        return new Response(200, Pages\HomeController::get($request));
+    function () {
+        return new Response(200, Default\HomeController::get());
     }
 ]);
 
+// Rota da página sobre
 $obRouter->get('/sobre', [
     'middlewares' => [
         'cache'
     ],
-    function ($request) {
-        return new Response(200, Pages\AboutController::get($request));
+    function () {
+        return new Response(200, Default\AboutController::get());
     }
 ]);

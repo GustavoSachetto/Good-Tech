@@ -4,8 +4,8 @@ include 'pages/default.php';
 
 include 'pages/login.php';
 
-include 'pages/post.php';
+include 'pages/account.php';
 
-include 'pages/register.php';
+include 'pages/post.php';
 
 include 'pages/project.php';

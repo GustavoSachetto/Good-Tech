@@ -21,7 +21,7 @@ return new class extends Interaction
             'email'         => 'sachetto@email.com',
             'admin_access'  => true,
             'image'         => 'user-default.webp',
-            'password_hash' => '$2y$10$R4iNbyE5R7WY7rB592SpRe8fpdoCpqNbU1sAR16o9gaA6GmFfdUri' // default
+            'password_hash' => '$2y$10$mUsr/jxR6XXs8lgXeaukPu/zkkOTIsX2dUus43h9sDBCuDu/upY/e' // admin
         ],
         [
             'name'          => 'Patrick Felix',
@@ -32,7 +32,7 @@ return new class extends Interaction
         ],
         [
             'name'          => 'João Vitor',
-            'email'         => 'João@email.com',
+            'email'         => 'joao@email.com',
             'admin_access'  => true,
             'image'         => 'user-default.webp',
             'password_hash' => '$2y$10$R4iNbyE5R7WY7rB592SpRe8fpdoCpqNbU1sAR16o9gaA6GmFfdUri' // default
@@ -54,6 +54,6 @@ return new class extends Interaction
     */
     public function down(): void
     {
-        (new Database('user'))->securityDelete('id <= 2');
+        (new Database('user'))->securityDelete('id <= 4');
     }
 };

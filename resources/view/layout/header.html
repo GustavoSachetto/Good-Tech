@@ -1,43 +1,31 @@
-<header class="navbar navbar-expand-lg navbar-light bg-light py-2 border-bottom border-1">
-    <nav class="container-fluid">
-        <a class="navbar-brand mx-2" href="{{URL}}">
-            <img src="{{URL}}/resources/img/logo.png" alt="Logo" width="75px" class="px-2">
-            <span>Good Tech</span>
-        </a>
-        <div class="navbar-toggler me-1" style="border:none;" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="35" height="35" viewBox="0 0 50 50" class="menu-icon">
-                <path d="M 5 8 A 2.0002 2.0002 0 1 0 5 12 L 45 12 A 2.0002 2.0002 0 1 0 45 8 L 5 8 z M 5 23 A 2.0002 2.0002 0 1 0 5 27 L 45 27 A 2.0002 2.0002 0 1 0 45 23 L 5 23 z M 5 38 A 2.0002 2.0002 0 1 0 5 42 L 45 42 A 2.0002 2.0002 0 1 0 45 38 L 5 38 z"></path>
-            </svg>
-        </div>
-        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-            <ul class="navbar-nav">
-                <li class="nav-item mx-3 dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                      Pesquisa
-                    </a>
-                    <ul class="dropdown-menu">
-                      <li><a class="dropdown-item" href="{{URL}}/pesquisa">Ver todas</a></li>
-                      <li><hr class="dropdown-divider"></li>
-                      <li><a class="dropdown-item" href="{{URL}}/nova-pesquisa">Cadastrar</a></li>
-                    </ul>
-                </li>
-                <li class="nav-item mx-3 dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                      Projetos
-                    </a>
-                    <ul class="dropdown-menu">
-                      <li><a class="dropdown-item" href="{{URL}}/project">Ver todas</a></li>
-                      <li><hr class="dropdown-divider"></li>
-                      <li><a class="dropdown-item" href="{{URL}}/new-project">Cadastrar</a></li>
-                    </ul>
-                </li>
-                <li class="nav-item mx-3">
-                    <a class="nav-link" href="{{URL}}/sobre">Sobre</a>
-                </li>
-                <li class="nav-item mx-3 bg-dark px-4 rounded-5">
-                    <a class="nav-link text-light" href="{{URL}}/login">Login</a>
-                </li>
-            </ul>
-        </div>
-    </nav>
+<header class="container-nav">
+  <a href="{{URL}}" class="logo">
+    <img src="{{URL}}/resources/img/logo.png" alt="Logotipo">
+    <span class="title">good-tech</span>
+  </a>
+  <nav class="navbar">
+    <div class="dropdown">
+      <button class="btn-line light-blue" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+        Pesquisas
+      </button>
+      <ul class="dropdown-menu mt-2">
+        <li><a class="dropdown-item" href="{{URL}}/pesquisas">Buscar</a></li>
+        <!-- <li><a class="dropdown-item" href="{{URL}}/pesquisas/alterar">Alterar</a></li> -->
+        <li><a class="dropdown-item" href="{{URL}}/pesquisas/cadastrar">Cadastrar</a></li>
+        <!-- <li><hr class="dropdown-divider"></li>
+        <li><a class="dropdown-item" href="{{URL}}/pesquisas/deletar">Deletar</a></li> -->
+      </ul>
+    </div>
+    <div class="dropdown">
+      <button class="btn-line light-blue" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+        Projetos
+      </button>
+      <ul class="dropdown-menu mt-2">
+        <li><a class="dropdown-item" href="{{URL}}/projetos">Buscar</a></li>
+        <li><a class="dropdown-item" href="{{URL}}/projetos/cadastrar">Cadastrar</a></li>
+      </ul>
+    </div>
+    <a href="{{URL}}/sobre" class="btn-line light-blue">Sobre</a>
+    <a href="{{URL}}/{{route}}" class="btn-login">{{status}}</a>
+  </nav>
 </header>

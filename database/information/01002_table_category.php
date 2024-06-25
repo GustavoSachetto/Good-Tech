@@ -17,7 +17,10 @@ return new class extends Interaction
         ['name' => 'Escopo'],
         ['name' => 'Matriz'],
         ['name' => 'Diagrama'],
-        ['name' => 'Sensitiva']
+        ['name' => 'Sensitiva'],
+        ['name' => 'Requisitos'],
+        ['name' => 'Práticas'],
+        ['name' => 'Web'],
     ];
 
     /** 
@@ -35,6 +38,6 @@ return new class extends Interaction
     */
     public function down(): void
     {
-        (new Database('category'))->securityDelete('id <= 6');
+        (new Database('category'))->securityDelete('id <= 9');
     }
 };

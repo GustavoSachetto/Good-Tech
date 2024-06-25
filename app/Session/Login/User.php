@@ -26,6 +26,7 @@ class User
         $_SESSION['user'] = [
             'id'           => $obUser->id,
             'name'         => $obUser->name,
+            'image'        => $obUser->image,
             'email'        => $obUser->email,
             'admin_access' => $obUser->admin_access
         ];

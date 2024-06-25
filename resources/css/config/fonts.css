@@ -1,0 +1,19 @@
+h1 {
+  font-size: 36px;
+}
+
+h2 {
+  font-size: 24px;
+}
+
+h3 {
+  font-size: 18px;
+}
+
+h4 {
+  font-size: clamp(1em, 0.8em + 1vw, 3em);
+}
+
+p, span, li {
+  font-size: 17px;
+}

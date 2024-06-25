@@ -1,0 +1,28 @@
+main > article.container-information > h1 {
+  text-align: center;
+  margin: 36px 0;
+  color: var(--orange);
+}
+
+main > article.container-information h2 {
+  color: var(--light-blue);
+}
+
+main > article.container-information > section.author > ul.container-img-authors {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+main > article.container-information > section.author > ul.container-img-authors img {
+  width: 280px;
+  height: 320px;
+  object-fit: cover;
+  border-radius: 7px;
+  box-shadow: var(--default-shadow);
+}
+
+main > article.container-information > section.author > ul.container-img-authors h3 {
+  margin-top: 12px;
+}

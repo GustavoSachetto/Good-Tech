@@ -1,39 +1,39 @@
 <?php
 
+use App\Http\Request;
 use App\Http\Response;
-use App\Controller\Pages;
+use App\Controller\Pages\Admin;
 
-// Modelo á ser seguido na definição de rotas das páginas da aplicação
-
-$obRouter->get('/pesquisa', [
-    'middlewares' => [
-        'cache'
-    ],
-    function ($request) {
-        return new Response(200, Pages\PostController::get($request));
+// Rota da página de pesquisas
+$obRouter->get('/pesquisas', [
+    function () {
+        return new Response(200, Admin\PostController::get());
     }
 ]);
 
-$obRouter->get('/pesquisa/{id}', [
-    'middlewares' => [
-        'cache'
-    ],
-    function ($id) {
-        return new Response(200, Pages\PostController::fetch($id));
+// Rota da página de visualização das pesquisas
+$obRouter->get('/pesquisas/visualizar/{id}', [
+    function (Request $request, string $id) {
+        return new Response(200, Admin\PostController::fetch($request, $id));
     }
 ]);
 
-$obRouter->get('/nova-pesquisa', [
+// Rota da página cadastro de pesquisa
+$obRouter->get('/pesquisas/cadastrar', [
     'middlewares' => [
         'require-login'
     ],
-    function ($request) {
-        return new Response(200, Pages\PostController::getForm($request));
+    function (Request $request) {
+        return new Response(200, Admin\PostController::getFormCreate($request));
     }
 ]);
 
-$obRouter->post('/nova-pesquisa', [
-    function ($request) {
-        return new Response(200, Pages\PostController::set($request));
+// Rota de cadastro de pesquisa
+$obRouter->post('/pesquisas/cadastrar', [
+    'middlewares' => [
+        'require-login'
+    ],
+    function (Request $request) {
+        return new Response(201, Admin\PostController::setCreate($request));
     }
 ]);

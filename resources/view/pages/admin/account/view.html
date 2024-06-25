@@ -1,0 +1,23 @@
+<main>
+  <article class="container-account">
+    <h1>Minha conta</h1>
+    <section class="account">
+      <div class="information">
+        <img src="{{URL}}/resources/img/user/{{image}}" alt="Imagem de Usuário">
+        <div class="text">
+          <h2>{{name}}</h2>
+          <strong>{{admin_access}}</strong>
+          <span>Email: {{email}}</span>
+        </div>
+      </div>
+      <div class="action">
+        <a href="{{URL}}/conta/alterar" class="btn-default">Editar</a>
+        <a href="{{URL}}/conta/logout" class="btn-default light-red">Sair</a>
+      </div>
+    </section>
+    <!-- <section class="other">
+      <a href="{{URL}}/conta/pesquisas" class="btn-default orange">Minhas pesquisas</a>
+      <a href="{{URL}}/conta/projetos" class="btn-default orange">Meus projetos</a>
+    </section> -->
+  </article>
+</main>

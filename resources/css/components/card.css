@@ -1,0 +1,22 @@
+section.container-card {
+  width: 390px;
+  height: 500px;
+}
+
+section.container-card > img {
+  width: 100%;
+  height: 230px;
+  object-fit: cover;
+  border-radius: 7px;
+  margin-bottom: 20px;
+  box-shadow: var(--default-shadow);
+}
+
+section.container-card > div.information {
+  margin-bottom: 30px;
+}
+
+section.container-card > div.information > h3 {
+  font-size: 24px;
+  color: var(--dark-gray);
+}

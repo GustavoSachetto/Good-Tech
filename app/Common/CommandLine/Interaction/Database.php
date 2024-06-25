@@ -4,6 +4,7 @@ namespace App\Common\CommandLine\Interaction;
 
 use FilesystemIterator;
 use App\Common\CommandLine\Required\Interaction;
+use App\Model\DatabaseManager\Database as DatabaseManager;
 
 class Database
 {
@@ -34,6 +35,16 @@ class Database
         Interaction::clear();
     }
 
+    public static function setImportDB(): void
+    {
+        $dir = URL."/database/import/good_tech.sql";
+
+        $fileSql = file_get_contents($dir);
+        (new DatabaseManager)->import($fileSql);
+
+        echo "[success] up: import database.";      
+    }
+
     /** 
      * Método responsável por verificar os argumentos recebidos
     */
@@ -56,7 +67,10 @@ class Database
             case 'fresh':
                 self::setInteraction('down', 'information');
                 break;
-            
+            case 'import':
+                self::setImportDB();
+                break;
+                
             default:
                 echo '[error] Argumento inválido.';
                 break;

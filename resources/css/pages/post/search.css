@@ -1,0 +1,21 @@
+main > article.container-text {
+  margin-bottom: 23px;
+}
+
+main > article.container-text > h1 {
+  color: var(--orange);
+  text-align: center;
+}
+
+main > article.container-text > h2 {
+  font-size: 30px;
+  margin-top: 30px;
+  color: var(--light-blue);
+}
+
+main > article.container-posts {
+  display: flex; 
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: 20px;
+}

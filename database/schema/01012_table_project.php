@@ -14,14 +14,12 @@ return new class extends Interaction
         (new Database)->create('project', function(Blueprint $table) {
             $table->id();
             $table->varchar('title', 70)->unique()->notNull();
-            $table->varchar('subtitle', 200)->notNull();
-            $table->text('content')->notNull();
+            $table->text('description')->notNull();
             $table->varchar('image');
+            $table->varchar('access_link');
             $table->timestamp('created_at');
             $table->bigInt('user_id', true)->notNull();
-            $table->bigInt('category_id', true)->notNull();
             $table->foreign('user_id', 'user', 'id');
-            $table->foreign('category_id', 'category', 'id');
             $table->boolean('deleted')->default('false');
         });
     }

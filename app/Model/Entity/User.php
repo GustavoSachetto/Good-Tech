@@ -12,10 +12,10 @@ class User
     public string $name;
     public string $email;
     public string $password_hash;
-    public bool|int $admin_access = false;
+    public bool $admin_access = false;
     public string|null $image = null;
 
-    public bool|int $deleted = false;
+    public bool $deleted = false;
 
     /**
      * Método responsável por cadastrar a instância atual no banco de dados

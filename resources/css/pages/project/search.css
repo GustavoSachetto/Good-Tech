@@ -1,0 +1,25 @@
+main > article.container-text {
+  margin-bottom: 23px;
+}
+
+main > article.container-text > h1 {
+  color: var(--orange);
+  text-align: center;
+}
+
+main > article.container-text > h2 {
+  font-size: 30px;
+  margin-top: 30px;
+  color: var(--light-blue);
+}
+
+main > article.container-projects {
+  display: flex; 
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: 60px;
+}
+main > article.container-projects > section.container-card {
+  width: 400px;
+  height: 570px;
+}

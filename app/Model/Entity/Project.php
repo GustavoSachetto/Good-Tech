@@ -10,20 +10,17 @@ class Project
     public int $id;
     
     public string $title;
-    public string $subtitle;
-    public string $content;
+    public string $description;
     public string|null $image = null;
+    public string|null $access_link = null;
     public string $created_at;
-
+    
     public int $user_id;
     public string $user_name;
 
-    public int $category_id;
-    public string $category_name;
-
     public bool $deleted = false;
 
-    private static $fields = 'project.*, user.name as user_name, category.name as category_name';
+    private static $fields = 'project.*, user.name as user_name';
 
     /**
      * Método responsável por cadastrar a instância atual no banco de dados
@@ -32,11 +29,10 @@ class Project
     {
         $this->id = (new Database('project'))->insert([
             'title'       => $this->title,
-            'subtitle'    => $this->subtitle,
-            'content'     => $this->content,
+            'description' => $this->description,
             'image'       => $this->image,
+            'access_link' => $this->access_link,
             'user_id'     => $this->user_id,
-            'category_id' => $this->category_id,
             'deleted'     => $this->deleted
         ]);
 
@@ -50,11 +46,11 @@ class Project
     {
         return (new Database('project'))->update('id = '.$this->id, [
             'title'       => $this->title,
-            'subtitle'    => $this->subtitle,
-            'content'     => $this->content,
+            'description' => $this->description,
             'image'       => $this->image,
+            'access_link' => $this->access_link,
+            'created_at'  => $this->created_at,
             'user_id'     => $this->user_id,
-            'category_id' => $this->category_id,
             'deleted'     => $this->deleted
         ]);
     }
@@ -70,19 +66,17 @@ class Project
     /**
      * Método que retorna os dados cadastrados no banco
      */
-    public static function getProject(
+    public static function getProjects(
         string $where = null, 
         string $order = null, 
         string $limit = null, 
         string $fields = null
         ): PDOStatement
     {
-        $DBPost = new Database('project');
+        $DBProject = new Database('project');
+        $DBProject->join('user', 'project.user_id = user.id');
 
-        $DBPost->join('user', 'project.user_id = user.id');
-        $DBPost->join('category', 'project.category_id = category.id');
-
-        return $DBPost->select($where, $order, $limit, $fields ?? self::$fields);
+        return $DBProject->select($where, $order, $limit, $fields ?? self::$fields);
     }
 
     /**
@@ -90,14 +84,14 @@ class Project
      */
     public static function getProjectById(int $id): Project|string
     {
-        return self::getProject("project.id = {$id}")->fetchObject(self::class);
+        return self::getProjects("id = {$id}")->fetchObject(self::class);
     }
 
     /**
-     * Método reponsável por retornar um dado com base no seu título
+     * Método reponsável por retornar um dado com base no seu titulo
      */
     public static function getProjectByTitle(string $title): Project|string
     {
-        return self::getProject("title = '{$title}'")->fetchObject(self::class);
+        return self::getProjects("title = '{$title}'")->fetchObject(self::class);
     }
 }

@@ -1,44 +1,35 @@
 <?php
 
+use App\Http\Request;
 use App\Http\Response;
-use App\Controller\Pages;
+use App\Controller\Pages\Admin;
 
-// Modelo á ser seguido na definição de rotas das páginas da aplicação
-
-$obRouter->get('/project', [
+// Rota da página de projetos
+$obRouter->get('/projetos', [
     'middlewares' => [
-        'cache',
-        'require-login'
+      'require-login'
     ],
-    function ($request) {
-        return new Response(200, Pages\ProjectController::get($request));
+    function (Request $request) {
+        return new Response(200, Admin\ProjectController::get());
     }
 ]);
 
-$obRouter->get('/project/{id}', [
+// Rota da página de cadastrar projetos
+$obRouter->get('/projetos/cadastrar', [
     'middlewares' => [
-        'cache',
-        'require-login'
+      'require-login'
     ],
-    function ($id) {
-        return new Response(200, Pages\ProjectController::fetch($id));
+    function (Request $request) {
+        return new Response(200, Admin\ProjectController::getFormCreate($request));
     }
 ]);
 
-$obRouter->get('/new-project', [
+// Rota de cadastro de projetos
+$obRouter->post('/projetos/cadastrar', [
     'middlewares' => [
-        'require-login'
+      'require-login'
     ],
-    function ($request) {
-        return new Response(200, Pages\ProjectController::getForm($request));
-    }
-]);
-
-$obRouter->post('/new-project', [
-    'middlewares' => [
-        'require-login'
-    ],
-    function ($request) {
-        return new Response(200, Pages\ProjectController::set($request));
+    function (Request $request) {
+        return new Response(201, Admin\ProjectController::setCreate($request));
     }
 ]);

@@ -3,6 +3,7 @@
 namespace App\Controller;
 
 use App\Utils\View;
+use App\Session\login\User as SessionLoginUser;
 
 abstract class Page
 {
@@ -11,7 +12,15 @@ abstract class Page
     */
     private static function getHeader(): string 
     {
-        return View::render('layout/header');
+        $values = SessionLoginUser::isLogged() ? [
+            'status' => 'Minha conta',
+            'route'  => 'conta/dados',
+        ] : [
+            'status' => 'Login',
+            'route'  => 'conta/login',
+        ];
+
+        return View::render('layout/header', $values);
     }
     
     /** 

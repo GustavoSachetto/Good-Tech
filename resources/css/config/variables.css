@@ -1,0 +1,23 @@
+:root {
+  
+  /* ================== Cores ================== */
+
+  --orange: #FF914D;
+  --dark-blue: #126787;
+  --light-blue: #38B6FF;
+  --light-gray: #D9D9D9;
+  --dark-gray: #3d3d3d;
+  --black: #000000;
+  --white: #FFFFFF;
+  --light-red: #e96161;
+  
+  /* ================== Shadows ================== */
+
+  --default-shadow: 1px 4px 8px #00000018;
+
+  /* ================= Fontes ================== */
+
+  --title-font: 'Mochiy Pop One', Arial, Verdana, sans-serif;
+  --heading-font: 'Poppins', Arial, Tahoma, Geneva, Verdana, sans-serif;
+  --body-font: 'Open sans', Arial, Helvetica, sans-serif;
+}

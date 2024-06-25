@@ -1,0 +1,29 @@
+<main>
+  <article class="container-create">
+    <h1>Cadastrar pesquisa</h1>
+    <form action="" method="post" enctype="multipart/form-data">
+      <fieldset>
+        <label for="title">Título <span class="text-danger">Obrigatório</span></label>
+        <input type="text" name="title" id="title" maxlength="70" placeholder="Exemplo">
+      </fieldset>
+      <fieldset>
+        <label for="subtitle">Subtítulo <span class="text-danger">Obrigatório</span></label>
+        <input type="text" name="subtitle" id="subtitle" maxlength="200" placeholder="Exemplo Subtítulo">
+      </fieldset>
+      <fieldset>
+        <label for="image">Imagem</label>
+        <input type="file" name="image" id="image" placeholder="Exemplo Subtítulo" class="form-control">
+      </fieldset>
+      <fieldset>
+        <label for="category_id">Categoria <span class="text-danger">Obrigatório</span></label>
+        {{select_category}}
+      </fieldset>
+      <fieldset>
+        <label for="content">Conteúdo <span class="text-danger">Obrigatório</span></label>
+        <textarea name="content" id="content" cols="30" rows="10"></textarea>
+      </fieldset>
+      <div class="position-relative">{{alert}}</div>
+      <button type="submit" class="btn-default orange">Enviar</button>
+    </form>
+  </article>
+</main>

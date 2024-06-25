@@ -1,42 +1,45 @@
 <?php
 
+use App\Http\Request;
 use App\Http\Response;
-use App\Controller\Pages;
+use App\Controller\Pages\Default;
 
-// Modelo á ser seguido na definição de rotas das páginas da aplicação
-
-$obRouter->get('/login', [
+// Rota da página de login
+$obRouter->get('/conta/login', [
     'middlewares' => [
         'require-logout'
     ],
-    function ($request) {
-        return new Response(200, Pages\LoginController::get($request));
+    function (Request $request) {
+        return new Response(200, Default\LoginController::getFormLogin($request));
     }
 ]);
 
-$obRouter->post('/login', [
+// Rota da página de envio de login
+$obRouter->post('/conta/login', [
     'middlewares' => [
         'require-logout'
     ],
-    function ($request) {
-        return new Response(200, Pages\LoginController::setLogin($request));
+    function (Request $request) {
+        return new Response(200, Default\LoginController::setLogin($request));
     }
 ]);
 
-$obRouter->get('/logout', [
+// Rota da página de cadastro de login
+$obRouter->get('/conta/cadastrar', [
     'middlewares' => [
-        'require-login'
+        'require-logout'
     ],
-    function ($request) {
-        return new Response(200, Pages\LoginController::getLogout($request));
+    function (Request $request) {
+        return new Response(200, Default\LoginController::getFormRegister($request));
     }
 ]);
 
-$obRouter->post('/logout', [
+// Rota da página de envio de cadastro de login
+$obRouter->post('/conta/cadastrar', [
     'middlewares' => [
-        'require-login'
+        'require-logout'
     ],
-    function ($request) {
-        return new Response(200, Pages\LoginController::setLogout($request));
+    function (Request $request) {
+        return new Response(200, Default\LoginController::setRegister($request));
     }
 ]);

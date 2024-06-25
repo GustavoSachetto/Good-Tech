@@ -1,0 +1,52 @@
+main > article.container-login {
+  display: flex;
+  justify-content: center;
+}
+
+main > article.container-login > form.login {
+  width: 550px;
+  padding: 32px 26px;
+  border-radius: 28px;
+  border: 1px solid var(--dark-gray);
+}
+
+main > article.container-login > form.login > h1 {
+  color: var(--orange);
+}
+
+main > article.container-login > form.login > p {
+  margin: 12px 0;
+}
+
+main > article.container-login > form.login > fieldset {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 13px;
+}
+
+main > article.container-login > form.login > fieldset > label {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+main > article.container-login > form.login > fieldset > input {
+  padding: 5px 16px;
+  border-radius: 20px;
+  border: 1px solid var(--dark-gray);
+}
+
+main > article.container-login > form.login > button {
+  width: 100%;
+  margin: 14px 0;
+}
+
+main > article.container-login > form.login > nav.other {
+  display: block;
+}
+
+main > article.container-login > form.login > nav.other > a {
+  font-size: 16px;
+  color: var(--light-blue);
+  text-decoration: underline;
+}

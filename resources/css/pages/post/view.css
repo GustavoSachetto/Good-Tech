@@ -1,0 +1,31 @@
+main > article.container-view {
+  margin: 60px 13%;
+}
+
+main > article.container-view > section.container-information > nav a {
+  color: var(--light-blue);
+  text-decoration: underline;
+}
+
+main > article.container-view > section.container-project {
+  margin-top: 10px;
+}
+
+main > article.container-view > section.container-project > img {
+  border-radius: 7px;
+  box-shadow: var(--default-shadow);
+} 
+
+main > article.container-view > section.container-project > img, 
+main > article.container-view > section.container-project > div.content,
+main > article.container-view > section.container-project > ul.list-group {
+  min-width: 600px;
+  max-width: 950px;
+}
+
+main > article.container-view > section.other {
+  gap: 10px;
+  display: flex;
+  flex-direction: row;
+  margin-top: 38px;
+}

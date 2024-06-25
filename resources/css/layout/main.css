@@ -1,0 +1,8 @@
+main {
+  margin: 16px 32px;
+  min-height: calc(100vh - 193px);
+}
+
+article {
+  margin: 60px 20px 80px 20px;
+}

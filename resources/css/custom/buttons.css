@@ -1,0 +1,70 @@
+/* ================== Linha ================== */
+
+.btn-line {
+  position: relative;
+  white-space: nowrap;
+  background: transparent;
+  font: normal 17px var(--heading-font);
+}
+
+.btn-line:after {
+  width: 0;
+  height: 2px;
+  content: " ";
+  position: absolute;
+  left: 0;
+  top: 28px;
+  transition: 300ms ease-in-out;
+  background-color: var(--dark-gray);
+}
+
+.btn-line:hover::after {
+  width: 100%;
+}
+
+.btn-line.light-blue:after {
+  background-color: var(--light-blue);
+}
+
+.btn-line.dark-blue:after {
+  background-color: var(--dark-blue);
+}
+
+.btn-line.orange:after {
+  background-color: var(--orange);
+}
+
+/* ================= Padrão ================== */
+
+.btn-default {
+  color: white;
+  padding: 8px 56px;
+  border-radius: 25px;
+  transition: 300ms ease-in-out;
+  background-color: var(--dark-gray);
+  font: normal 18px var(--heading-font);
+}
+
+.btn-default:hover, .btn-default.light-red:hover {
+  background-color: var(--light-gray);
+}
+
+.btn-default.light-blue {
+  background-color: var(--light-blue);
+}
+
+.btn-default.dark-blue {
+  background-color: var(--dark-blue);
+}
+
+.btn-default.light-red {
+  background-color: var(--light-red);
+}
+
+.btn-default.orange {
+  background-color: var(--orange);
+}
+
+.btn-default.light-blue:hover, .btn-default.dark-blue:hover, .btn-default.orange:hover  {
+  background-color: var(--dark-gray);
+}
