@@ -1,9 +1,9 @@
-main > article.container-introduction {
+main>article.container-introduction {
   display: flex;
   flex-direction: row;
 }
 
-main > article.container-introduction > section.about {
+main>article.container-introduction>section.about {
   width: 50vw;
   height: 28vh;
   min-height: 270px;
@@ -14,21 +14,29 @@ main > article.container-introduction > section.about {
   justify-content: space-between;
 }
 
-main > article.container-introduction > section.about > h1 {
+main>article.container-introduction>section.about>h1 {
   color: var(--orange);
 }
 
-main > article.container-introduction > section.about > p {
+main>article.container-introduction>section.about>p {
   width: 85%;
   line-height: 24px;
 }
 
-main > article.container-introduction > aside.illustration {
+main>article.container-introduction>aside.illustration {
   width: 50vw;
   display: flex;
   justify-content: center;
 }
 
-main > article.container-introduction > aside.illustration > img {
+main>article.container-introduction>aside.illustration>img {
   width: 100%;
+}
+
+@media (max-width: 1126px) {
+  main>article.container-introduction {
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
 }
