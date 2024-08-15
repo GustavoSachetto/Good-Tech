@@ -39,4 +39,7 @@ main>article.container-introduction>aside.illustration>img {
     justify-content: center;
     flex-direction: column;
   }
+  main>article.container-introduction>section.about {
+    margin-bottom: 130px;
+  }
 }
