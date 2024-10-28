@@ -20,6 +20,6 @@ $obRouter->get('/conta/logout', [
         'require-login'
     ],
     function (Request $request) {
-        return new Response(200, Admin\AccountController::setLogout($request));
+        return new Response(200, Admin\AccountController::setLogout($request) . "");
     }
 ]);

@@ -2,7 +2,7 @@
 
 use App\Http\Request;
 use App\Http\Response;
-use App\Controller\Pages\Default;
+use App\Controller\Pages\Common;
 
 // Rota da página de login
 $obRouter->get('/conta/login', [
@@ -10,7 +10,7 @@ $obRouter->get('/conta/login', [
         'require-logout'
     ],
     function (Request $request) {
-        return new Response(200, Default\LoginController::getFormLogin($request));
+        return new Response(200, Common\LoginController::getFormLogin($request));
     }
 ]);
 
@@ -20,7 +20,7 @@ $obRouter->post('/conta/login', [
         'require-logout'
     ],
     function (Request $request) {
-        return new Response(200, Default\LoginController::setLogin($request));
+        return new Response(200, Common\LoginController::setLogin($request));
     }
 ]);
 
@@ -30,7 +30,7 @@ $obRouter->get('/conta/cadastrar', [
         'require-logout'
     ],
     function (Request $request) {
-        return new Response(200, Default\LoginController::getFormRegister($request));
+        return new Response(200, Common\LoginController::getFormRegister($request));
     }
 ]);
 
@@ -40,6 +40,6 @@ $obRouter->post('/conta/cadastrar', [
         'require-logout'
     ],
     function (Request $request) {
-        return new Response(200, Default\LoginController::setRegister($request));
+        return new Response(200, Common\LoginController::setRegister($request));
     }
 ]);
