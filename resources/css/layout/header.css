@@ -1,12 +1,11 @@
 header.container-nav, header.container-nav > a.logo {
   display: flex;
   align-items: center;
-  flex-direction: column;
   justify-content: space-between;
 }
 
 header.container-nav {
-  margin: 20px 0 -50px;
+  margin: 16px 32px;
 }
 
 header.container-nav > a.logo > img {
@@ -21,10 +20,10 @@ header.container-nav > a.logo > span.title {
 }
 
 header.container-nav > nav.navbar {
-  width: 100%;
-  padding: 10px 15px 0 15px;
+  width: 36%;
   max-width: 550px;
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
 }
