@@ -32,6 +32,14 @@ abstract class Page
     }
 
     /** 
+     * Método responsável por renderizar as opções de acessibilidade da página
+    */
+   private static function getAccessibility(): string 
+   {
+       return View::render('layout/accessibility');
+   }
+
+    /** 
      * Método responsável por renderizar o conteúdo da página
     */
     public static function getPage(string $title, string $content): string 
@@ -40,7 +48,8 @@ abstract class Page
             'title' => $title,
             'content' => $content,
             'header' => self::getHeader(),
-            'footer' => self::getFooter()
+            'footer' => self::getFooter(),
+            'accessibility' => self::getAccessibility()
         ]);
     }
 }
