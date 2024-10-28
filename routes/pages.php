@@ -1,6 +1,6 @@
 <?php
 
-include 'pages/public.php';
+include 'pages/common.php';
 
 include 'pages/login.php';
 

@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Controller\Pages\Public;
+namespace App\Controller\Pages\Common;
 
 use App\Utils\View;
 use App\Http\Request;
@@ -20,7 +20,7 @@ class LoginController extends Page
         $alert = !is_null($errorMessage) ? AlertController::get('danger', $errorMessage) : '';
 
         $title = 'Good tech | Entre agora na sua conta';
-        $content = View::render('pages/public/login/form-login', [
+        $content = View::render('pages/common/login/form-login', [
             'alert' => $alert
         ]);
         
@@ -58,7 +58,7 @@ class LoginController extends Page
         $alert = !is_null($errorMessage) ? AlertController::get('danger', $errorMessage) : '';
 
         $title = 'Good tech | Cadastre-se agora no nosso site';
-        $content = View::render('pages/public/login/form-register', [
+        $content = View::render('pages/common/login/form-register', [
             'alert' => $alert
         ]);
         
