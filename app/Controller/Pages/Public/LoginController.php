@@ -8,7 +8,7 @@ use App\Utils\Examiner;
 use App\Controller\Page;
 use App\Model\Entity\User as EntityUser;
 use App\Controller\Components\AlertController;
-use App\Session\login\User as SessionLoginUser;
+use App\Session\Login\User as SessionLoginUser;
 
 class LoginController extends Page
 {

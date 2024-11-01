@@ -11,7 +11,7 @@ use App\Model\Entity\Post as EntityPost;
 use App\Controller\Components\CardController;
 use App\Controller\Components\AlertController;
 use App\Controller\Components\SelectController;
-use App\Session\login\User as SessionLoginUser;
+use App\Session\Login\User as SessionLoginUser;
 use App\Utils\Manager\DateFormatter;
 
 class PostController extends Page

@@ -10,7 +10,7 @@ use App\Utils\Manager\Image;
 use App\Controller\Components\CardController;
 use App\Controller\Components\AlertController;
 use App\Model\Entity\Project as EntityProject;
-use App\Session\login\User as SessionLoginUser;
+use App\Session\Login\User as SessionLoginUser;
 
 class ProjectController extends Page
 {
