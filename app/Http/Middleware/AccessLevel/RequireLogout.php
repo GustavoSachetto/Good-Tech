@@ -5,7 +5,7 @@ namespace App\Http\Middleware\AccessLevel;
 use Closure;
 use App\Http\Request;
 use App\Http\Response;
-use App\Session\login\User as SessionLoginUser;
+use App\Session\Login\User as SessionLoginUser;
 
 class RequireLogout
 {
