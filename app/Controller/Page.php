@@ -34,10 +34,10 @@ abstract class Page
     /** 
      * Método responsável por renderizar as opções de acessibilidade da página
     */
-   private static function getAccessibility(): string 
-   {
-       return View::render('layout/accessibility');
-   }
+    private static function getAccessibility(): string 
+    {
+        return View::render('layout/accessibility');
+    }
 
     /** 
      * Método responsável por renderizar o conteúdo da página

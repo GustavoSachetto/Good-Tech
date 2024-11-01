@@ -29,7 +29,7 @@ class PostController extends Page
         }
 
         $title = 'Good tech | Buscar pesquisas';
-        $content = View::render('pages/default/post/search', [
+        $content = View::render('pages/public/post/search', [
             'cards' => $itens
         ]);
 
@@ -50,7 +50,7 @@ class PostController extends Page
         }
 
         $title = 'Good tech | '.$obPost->title;
-        $content = View::render('pages/default/post/view', [
+        $content = View::render('pages/public/post/view', [
             'id'         => $obPost->id,
             'image'      => $obPost->image,
             'title'      => $obPost->title,

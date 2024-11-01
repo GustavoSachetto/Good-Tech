@@ -1,7 +1,7 @@
 <?php
 
 use App\Http\Response;
-use App\Controller\Pages\Common;
+use App\Controller\Pages\Public;
 
 // Rota da página home
 $obRouter->get('/', [
@@ -9,7 +9,7 @@ $obRouter->get('/', [
         'cache'
     ],
     function () {
-        return new Response(200, Common\HomeController::get());
+        return new Response(200, Public\HomeController::get());
     }
 ]);
 
@@ -19,6 +19,6 @@ $obRouter->get('/sobre', [
         'cache'
     ],
     function () {
-        return new Response(200, Common\AboutController::get());
+        return new Response(200, Public\AboutController::get());
     }
 ]);
