@@ -3,7 +3,7 @@
 namespace App\Controller;
 
 use App\Utils\View;
-use App\Session\login\User as SessionLoginUser;
+use App\Session\Login\User as SessionLoginUser;
 
 abstract class Page
 {
