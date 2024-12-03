@@ -23,6 +23,12 @@ Para construir esse sistema foi necessário o conhecimento em:
 - Organização de arquitetura de projeto e código
 - Semântica do HTML
 - Modularização do CSS
-- Implementação do menu de acessibilidade (UserWay e VLibras) 
+- Implementação do menu de acessibilidade (UserWay e VLibras)
+
+## Resultado
+__Home:__
+
+![Home](https://github.com/user-attachments/assets/6f957baa-bc57-4aa0-862d-7e1d52cbc3fc)
+
 
 *************
