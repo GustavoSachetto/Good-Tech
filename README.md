@@ -40,9 +40,5 @@ __Projetos__
 
 ![Projetos](https://github.com/user-attachments/assets/8dd8ee20-d3da-40d1-88ce-515c8f54400a)
 
-__Sobre__
-
-![Sobre](https://github.com/user-attachments/assets/428d0135-3c05-45d6-a5b2-b0e016dc7cbd)
-
 *************
 
