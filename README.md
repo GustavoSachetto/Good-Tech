@@ -26,9 +26,23 @@ Para construir esse sistema foi necessário o conhecimento em:
 - Implementação do menu de acessibilidade (UserWay e VLibras)
 
 ## Resultado
-__Home:__
+Confira abaixo a demonstração de algumas da principais telas do projeto:
+
+__Home__
 
 ![Home](https://github.com/user-attachments/assets/6f957baa-bc57-4aa0-862d-7e1d52cbc3fc)
 
+__Pesquisas__
+
+![Pesquisas](https://github.com/user-attachments/assets/29ac2be9-8835-4ee8-8937-1fe925e05e4c)
+
+__Projetos__
+
+![Projetos](https://github.com/user-attachments/assets/8dd8ee20-d3da-40d1-88ce-515c8f54400a)
+
+__Sobre__
+
+![Sobre](https://github.com/user-attachments/assets/428d0135-3c05-45d6-a5b2-b0e016dc7cbd)
 
 *************
+
