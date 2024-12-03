@@ -26,7 +26,7 @@ Para construir esse sistema foi necessário o conhecimento em:
 - Implementação do menu de acessibilidade (UserWay e VLibras)
 
 ## Resultado
-Confira abaixo a demonstração de algumas da principais telas do projeto:
+Confira abaixo a demonstração de algumas das principais telas do projeto:
 
 __Home__
 
